@@ -1,0 +1,191 @@
+# Essential Whitelist - Domains that should NEVER be blocked
+# These are core services required for apps to function
+
+# =========================================
+# GOOGLE CORE SERVICES
+# =========================================
+google.com
+www.google.com
+accounts.google.com
+apis.google.com
+clients1.google.com
+clients2.google.com
+clients3.google.com
+clients4.google.com
+clients5.google.com
+clients6.google.com
+play.google.com
+ssl.google-analytics.com
+www.googleapis.com
+googleapis.com
+storage.googleapis.com
+firebaseinstallations.googleapis.com
+securetoken.googleapis.com
+identitytoolkit.googleapis.com
+android.googleapis.com
+cloudconfig.googleapis.com
+fonts.googleapis.com
+fonts.gstatic.com
+dns.google
+dns.google.com
+8.8.8.8.in-addr.arpa
+8.8.4.4.in-addr.arpa
+
+# =========================================
+# YOUTUBE CORE SERVICES
+# =========================================
+youtube.com
+www.youtube.com
+m.youtube.com
+youtu.be
+youtube-nocookie.com
+youtubei.googleapis.com
+youtube.googleapis.com
+yt3.ggpht.com
+yt4.ggpht.com
+i.ytimg.com
+s.ytimg.com
+i9.ytimg.com
+ytimg.com
+googlevideo.com
+*.googlevideo.com
+r1.sn-*.googlevideo.com
+r2.sn-*.googlevideo.com
+r3.sn-*.googlevideo.com
+r4.sn-*.googlevideo.com
+r5.sn-*.googlevideo.com
+r6.sn-*.googlevideo.com
+r7.sn-*.googlevideo.com
+r8.sn-*.googlevideo.com
+video.google.com
+youtube-ui.l.google.com
+wide-youtube.l.google.com
+youtubeembedded-pa.googleapis.com
+yt-video-upload.l.google.com
+
+# =========================================
+# GOOGLE AUTHENTICATION & LOGIN
+# =========================================
+accounts.google.com
+accounts.youtube.com
+oauth2.googleapis.com
+www.googleapis.com
+content.googleapis.com
+lh3.googleusercontent.com
+lh4.googleusercontent.com
+lh5.googleusercontent.com
+lh6.googleusercontent.com
+
+# =========================================
+# ANDROID ESSENTIAL SERVICES
+# =========================================
+android.clients.google.com
+android.googleapis.com
+play.googleapis.com
+vending.google.com
+mtalk.google.com
+mobile-gtalk.l.google.com
+alt1-mtalk.google.com
+alt2-mtalk.google.com
+alt3-mtalk.google.com
+alt4-mtalk.google.com
+alt5-mtalk.google.com
+alt6-mtalk.google.com
+alt7-mtalk.google.com
+alt8-mtalk.google.com
+
+# =========================================
+# GOOGLE MAPS & LOCATION
+# =========================================
+maps.google.com
+maps.googleapis.com
+maps.gstatic.com
+mapsengine.google.com
+khms0.google.com
+khms1.google.com
+khms2.google.com
+khms3.google.com
+mt0.google.com
+mt1.google.com
+mt2.google.com
+mt3.google.com
+
+# =========================================
+# CAPTCHA & SECURITY
+# =========================================
+www.gstatic.com
+gstatic.com
+recaptcha.net
+www.recaptcha.net
+recaptcha.google.com
+
+# =========================================
+# COMMON CDNs
+# =========================================
+cdn.jsdelivr.net
+cdnjs.cloudflare.com
+unpkg.com
+ajax.googleapis.com
+code.jquery.com
+
+# =========================================
+# SOCIAL MEDIA CORE (not their trackers)
+# =========================================
+facebook.com
+www.facebook.com
+m.facebook.com
+static.xx.fbcdn.net
+connect.facebook.net
+twitter.com
+x.com
+api.twitter.com
+api.x.com
+instagram.com
+www.instagram.com
+reddit.com
+www.reddit.com
+oauth.reddit.com
+
+# =========================================
+# COMMON SERVICES
+# =========================================
+github.com
+githubusercontent.com
+amazon.com
+amazonaws.com
+cloudfront.net
+akamaihd.net
+akamai.net
+microsoft.com
+live.com
+outlook.com
+office.com
+apple.com
+icloud.com
+netflix.com
+spotify.com
+twitch.tv
+discord.com
+discord.gg
+whatsapp.com
+web.whatsapp.com
+telegram.org
+
+# =========================================
+# PAYMENT & BANKING
+# =========================================
+paypal.com
+stripe.com
+braintree-api.com
+checkout.google.com
+pay.google.com
+wallet.google.com
+
+# =========================================
+# CAPTIVE PORTAL DETECTION
+# =========================================
+connectivitycheck.gstatic.com
+connectivitycheck.android.com
+clients3.google.com
+www.msftconnecttest.com
+captive.apple.com
