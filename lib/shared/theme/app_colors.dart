@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Cloak color palette - inspired by Ghostery with a modern dark theme
+/// Cloak color palette - modern dark theme for privacy protection
 class AppColors {
   AppColors._();
 

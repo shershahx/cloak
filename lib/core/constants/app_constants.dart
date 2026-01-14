@@ -10,7 +10,7 @@ class AppConstants {
   // Blocklist Info
   static const int totalBlockedDomains = 108500;
   static const String blocklistVersion = '2026.01.14';
-  static const String blocklistSource = 'Ghostery';
+  static const String blocklistSource = 'Community Lists';
 
   // DNS Servers
   static const Map<String, String> dnsServers = {

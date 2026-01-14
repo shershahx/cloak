@@ -143,13 +143,13 @@ class SettingsScreen extends ConsumerWidget {
                     onTap: null,
                   ),
                   _SettingsTile(
-                    title: 'Based on Ghostery',
-                    subtitle: 'Open source privacy blocklist',
+                    title: 'Open Source',
+                    subtitle: 'Community-maintained blocklists',
                     icon: Icons.code,
                     iconColor: AppColors.textMuted,
                     onTap: () {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Blocklist derived from Ghostery extension')),
+                        const SnackBar(content: Text('Blocklist derived from community sources')),
                       );
                     },
                   ),
@@ -199,10 +199,10 @@ class SettingsScreen extends ConsumerWidget {
           children: [
             _InfoRow('Total Domains', AppConstants.totalBlockedDomains.toString()),
             _InfoRow('Version', AppConstants.blocklistVersion),
-            _InfoRow('Source', 'Ghostery Extension'),
+            _InfoRow('Source', 'Community Lists'),
             const SizedBox(height: 12),
             Text(
-              'This blocklist contains domains from Ghostery\'s ad, tracking, and annoyance filters.',
+              'This blocklist contains domains from community-maintained ad, tracking, and annoyance filters.',
               style: AppTypography.bodySmall,
             ),
           ],
@@ -221,33 +221,75 @@ class SettingsScreen extends ConsumerWidget {
     showModalBottomSheet(
       context: context,
       backgroundColor: AppColors.surface,
+      isScrollControlled: true,
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) {
-        return SafeArea(
+        return Container(
+          constraints: BoxConstraints(
+            maxHeight: MediaQuery.of(context).size.height * 0.6,
+          ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              // Header with handle
+              Center(
+                child: Container(
+                  margin: const EdgeInsets.only(top: 12),
+                  width: 40,
+                  height: 4,
+                  decoration: BoxDecoration(
+                    color: AppColors.textMuted.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+              ),
               Padding(
-                padding: const EdgeInsets.all(20),
+                padding: const EdgeInsets.fromLTRB(20, 16, 20, 8),
                 child: Text('Select DNS Server', style: AppTypography.h4),
               ),
-              ...AppConstants.dnsServers.entries.map((entry) {
-                final isSelected = entry.value == currentDns;
-                return ListTile(
-                  title: Text(entry.key),
-                  subtitle: Text(entry.value),
-                  trailing: isSelected
-                      ? const Icon(Icons.check, color: AppColors.primary)
-                      : null,
-                  onTap: () {
-                    ref.read(appSettingsProvider.notifier).setDnsServer(entry.value);
-                    Navigator.pop(context);
-                  },
-                );
-              }),
+              Flexible(
+                child: ListView(
+                  shrinkWrap: true,
+                  children: AppConstants.dnsServers.entries.map((entry) {
+                    final isSelected = entry.value == currentDns;
+                    return Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: isSelected ? AppColors.primary.withOpacity(0.1) : Colors.transparent,
+                        borderRadius: BorderRadius.circular(12),
+                        border: isSelected ? Border.all(color: AppColors.primary, width: 1.5) : null,
+                      ),
+                      child: ListTile(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        title: Text(
+                          entry.key,
+                          style: TextStyle(
+                            color: isSelected ? AppColors.primary : AppColors.textPrimary,
+                            fontWeight: isSelected ? FontWeight.w600 : FontWeight.normal,
+                          ),
+                        ),
+                        subtitle: Text(
+                          entry.value,
+                          style: TextStyle(
+                            color: isSelected ? AppColors.primary.withOpacity(0.7) : AppColors.textSecondary,
+                            fontFamily: 'monospace',
+                          ),
+                        ),
+                        trailing: isSelected
+                            ? const Icon(Icons.check_circle, color: AppColors.primary)
+                            : Icon(Icons.circle_outlined, color: AppColors.textMuted.withOpacity(0.3)),
+                        onTap: () {
+                          ref.read(appSettingsProvider.notifier).setDnsServer(entry.value);
+                          Navigator.pop(context);
+                        },
+                      ),
+                    );
+                  }).toList(),
+                ),
+              ),
               const SizedBox(height: 16),
             ],
           ),

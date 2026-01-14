@@ -48,7 +48,7 @@ App → DNS Query → Cloak VPN → Check Lists → Allow/Block
 - **Frontend:** Flutter 3.10.1 + Riverpod
 - **Backend:** Kotlin VPN Service
 - **DNS Parsing:** Custom UDP packet parser
-- **Blocklist:** 106,964 domains from Ghostery/EasyList
+- **Blocklist:** 106,964 domains from community sources
 
 ## 🏗️ Building from Source
 
@@ -77,9 +77,9 @@ flutter build apk --release
 ## 📊 Blocklist Sources
 
 Domains are derived from:
-- [Ghostery Extension](https://github.com/nicholashess/ghostery-extension)
 - EasyList / EasyPrivacy
 - Fanboy's Annoyances
+- Community-maintained filter lists
 
 ## 🔐 Security & Privacy
 
@@ -98,9 +98,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- [Ghostery](https://www.ghostery.com/) - Blocklist source
 - [EasyList](https://easylist.to/) - Community blocklists
 - [Flutter](https://flutter.dev/) - UI framework
+- Open source community
 
 ---
 

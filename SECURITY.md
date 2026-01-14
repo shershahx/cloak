@@ -50,7 +50,7 @@ The app requires VPN permission solely to:
 ## Blocklist Security
 
 ### Source
-Blocklists are derived from Ghostery's open-source extension, which uses community-maintained lists including:
+Blocklists are derived from community-maintained open-source filter lists including:
 - EasyList (ads)
 - EasyPrivacy (tracking)
 - Fanboy's Annoyances
