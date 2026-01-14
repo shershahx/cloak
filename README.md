@@ -2,7 +2,7 @@
 
 **System-wide ad and tracker blocker for Android** using VPN-based DNS filtering. Block ads, trackers, and annoyances across all apps with a single tap.
 
-[![GitHub release](https://img.shields.io/github/v/release/YOUR_USERNAME/cloak?style=flat-square)](https://github.com/YOUR_USERNAME/cloak/releases)
+[![GitHub release](https://img.shields.io/github/v/release/shershahx/cloak?style=flat-square)](https://github.com/shershahx/cloak/releases)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 ## 📱 Screenshots
@@ -27,7 +27,7 @@
 
 ## 📥 Download
 
-Download the latest APK from [Releases](https://github.com/YOUR_USERNAME/cloak/releases/latest).
+Download the latest APK from [Releases](https://github.com/shershahx/cloak/releases/latest).
 
 ## 🔧 How It Works
 
@@ -61,7 +61,7 @@ App → DNS Query → Cloak VPN → Check Lists → Allow/Block
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/cloak.git
+git clone https://github.com/shershahx/cloak.git
 cd cloak
 
 # Get dependencies
